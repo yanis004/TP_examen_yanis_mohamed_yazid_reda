@@ -1,0 +1,7 @@
+*pycache*
+*.vscode*
+*.pytest_cache*
+*hypothesis*
+*htmlcov*
+*venv*
+*prof*
