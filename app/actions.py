@@ -52,7 +52,7 @@ def add_trainer_item(database: Session, item: schemas.ItemCreate, trainer_id: in
     """
         Create an item and link it to a trainer
     """
-    db_item = models.Item(**item.dict(), owner_id=trainer_id)
+    db_item = models.Item(**item.dict(), trainer_id=trainer_id)
     database.add(db_item)
     database.commit()
     database.refresh(db_item)
