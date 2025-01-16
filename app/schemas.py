@@ -1,6 +1,8 @@
 from datetime import date
 from typing import  List, Optional, Union
 from pydantic import BaseModel
+from typing import List, Optional
+from pydantic import BaseModel
 
 #
 #  ITEM
@@ -27,6 +29,7 @@ class PokemonBase(BaseModel):
     custom_name: Optional[str] = None
 
 class PokemonCreate(PokemonBase):
+    #trainer_id: int
     pass
 
 class Pokemon(PokemonBase):
@@ -50,6 +53,19 @@ class Trainer(TrainerBase):
     id: int
     inventory: List[Item] = []
     pokemons: List[Pokemon] = []
+
+    class Config:
+        orm_mode = True
+
+class Stat(BaseModel):
+    stat_name: str
+    base_stat: int
+
+class PokemonWithStats(BaseModel):
+    name: str
+    api_id: int
+    trainer_id: int
+    stats: List[Stat]
 
     class Config:
         orm_mode = True

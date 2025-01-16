@@ -2,7 +2,6 @@ from sqlalchemy.orm import Session
 from . import models, schemas
 from .utils.pokeapi import get_pokemon_name
 
-
 def get_trainer(database: Session, trainer_id: int):
     """
         Find a user by his id
