@@ -51,8 +51,8 @@ def create_pokemons():
                 {"api_id": 25, "custom_name": "Pikachu", "trainer_id": 1},
                 {"api_id": 1, "custom_name": "Bulbasaur", "trainer_id": 1},
                 {"api_id": 4, "custom_name": "Charmander", "trainer_id": 1},
-                {"api_id": 7, "custom_name": "Squirtle", "trainer_id": 1},
-                {"api_id": 23, "custom_name": "Eevee", "trainer_id": 1},
+                {"api_id": 7, "custom_name": "Squirtle", "trainer_id": 2},
+                {"api_id": 23, "custom_name": "Eevee", "trainer_id": 2},
             ]
             
             # Ajouter chaque Pokémon à la base de données
