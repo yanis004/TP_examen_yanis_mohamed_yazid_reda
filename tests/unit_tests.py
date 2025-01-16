@@ -11,7 +11,7 @@ class TestPokemonCreation:
     @pytest.fixture(autouse=True)
     def setup(self):
         """Configure la base de données pour les tests"""
-        Base.metadata.drop_all(bind=engine)  # S'assurer que la base est vide
+        Base.metadata.drop_all(bind=engine)  
         Base.metadata.create_all(bind=engine)
         self.db = SessionLocal()
         
@@ -32,7 +32,7 @@ class TestPokemonCreation:
         pokemon_data = schemas.PokemonCreate(
             api_id=25,
             custom_name="Pikachu",
-            trainer_id=trainer.id  # Ajout de trainer_id pour éviter l'erreur
+            trainer_id=trainer.id 
         )
         
         try:
@@ -129,7 +129,7 @@ class TestTrainers:
     @pytest.fixture(autouse=True)
     def setup(self):
         """Configure la base de données pour les tests"""
-        Base.metadata.drop_all(bind=engine)  # S'assurer que la base est vide
+        Base.metadata.drop_all(bind=engine) 
         Base.metadata.create_all(bind=engine)
         self.db = SessionLocal()
         yield
