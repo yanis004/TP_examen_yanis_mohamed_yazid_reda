@@ -29,8 +29,9 @@ class PokemonBase(BaseModel):
     custom_name: Optional[str] = None
 
 class PokemonCreate(PokemonBase):
-    #trainer_id: int
-    pass
+    api_id: int
+    custom_name: Optional[str]
+    trainer_id: int  
 
 class Pokemon(PokemonBase):
     id: int
